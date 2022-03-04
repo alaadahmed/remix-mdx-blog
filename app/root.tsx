@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LinksFunction,
   LiveReload,
@@ -30,11 +31,35 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+export function Layout({ children }: any) {
+  return (
+    <div className="pt-10 mx-auto max-w-5xl">
+      <div className="flex items-center justify-center space-x-8 mb-8">
+        <Link
+          to="/"
+          className="font-bold text-slate-600 text-lg hover:text-slate-900"
+        >
+          Home
+        </Link>
+        <Link
+          to="/blog"
+          className="font-bold text-slate-600 text-lg hover:text-slate-900"
+        >
+          Blog
+        </Link>
+      </div>
+      {children}
+    </div>
   );
 }

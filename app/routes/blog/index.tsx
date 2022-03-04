@@ -15,7 +15,7 @@ export const loader: LoaderFunction = () => {
 export default function BlogIndex() {
   const posts = useLoaderData();
   return (
-    <div>
+    <>
       <h2>Articles</h2>
       <ul>
         {posts.map((post: any) => (
@@ -27,6 +27,6 @@ export default function BlogIndex() {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }

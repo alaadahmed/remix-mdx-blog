@@ -5,7 +5,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm:build:css && remix build",
+    "build": "cross-env NODE_ENV=production npm run build:css && remix build",
     "build:css": "cross-env NODE_ENV=production tailwindcss -o ./app/tailwind.css",
     "dev": "cross-env NODE_ENV=development concurrently \"npm:dev:css\" \"remix dev\"",
     "dev:css": "tailwindcss -o ./app/tailwind.css --watch",

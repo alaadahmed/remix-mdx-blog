@@ -1,0 +1,19 @@
+---
+title: First Post
+date: 2022-03-04
+meta:
+  title: First Post Title
+  description: first post description, just to show styling.
+---
+
+## Hello World! {attributes.title}
+
+{attributes.date.toDateString()}
+
+```js
+function helloWorld() {
+  return 'hello!';
+}
+```
+
+To achieve this first of all I had to update the base `remix.config.js` so now I have the `mdx` property.
